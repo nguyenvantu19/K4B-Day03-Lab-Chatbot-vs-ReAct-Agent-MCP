@@ -36,6 +36,14 @@ class MockOfflineProvider(BaseLLMProvider):
 
     def generate_with_tools(self, prompt: str, tools_schema: List[Dict[str, Any]], system_prompt: str = "") -> Dict[str, Any]:
         prompt_lower = prompt.lower()
+
+        # Khi Agent đã có Observation, Mock phải tổng hợp kết quả thay vì gọi lại Tool.
+        if "observation từ tool" in prompt_lower:
+            return {
+                "type": "text",
+                "content": "[Mock Agent Response]: Tôi đã nhận được kết quả từ công cụ và hoàn tất yêu cầu của bạn.",
+                "thought": "Đã có Observation từ Tool, tôi tổng hợp kết quả để trả lời cuối cùng."
+            }
         
         # Mô phỏng nhận diện intent gọi Tool
         if "sv2026001" in prompt_lower and "đặt lịch" in prompt_lower:

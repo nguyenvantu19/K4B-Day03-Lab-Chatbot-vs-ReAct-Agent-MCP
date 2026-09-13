@@ -4,7 +4,7 @@
 > **Hình thức thực hiện:** **CÁ NHÂN** *(Mỗi học viên tự làm và tự nộp 1 bài cá nhân)*  
 > **Quy chuẩn nộp bài:** Học viên Fork Repo này về GitHub cá nhân và đổi tên theo đúng cú pháp:  
 > 📌 **`K4-DAY03-HoVaTen-MSSV`** *(Ví dụ: `K4-DAY03-NguyenVanA-SV2026001`)*  
-
+K4B-DAY03-NguyenVanTu-2A202602586
 ---
 
 ## ⚡ 1. QUICKSTART — CÀI ĐẶT MÔI TRƯỜNG & CHẠY THỬ (3 PHÚT)
@@ -24,6 +24,16 @@ python -m venv .venv
 # Trên macOS / Linux / Bash / Zsh:
 source .venv/bin/activate
 ```
+
+### Giao diện web (tùy chọn)
+
+Sau khi kích hoạt môi trường ảo, chạy lệnh sau và mở trình duyệt tại `http://127.0.0.1:8001`:
+
+```bash
+python src/web_app.py
+```
+
+Giao diện dùng chính ReAct Agent và MCP Server của bài lab; hoạt động được ở Mock Offline Mode nếu chưa có API key.
 
 ### Bước 2: Cài đặt thư viện & Tạo file cấu hình môi trường
 ```bash
